@@ -1,0 +1,12 @@
+<div class="container m-5">
+  <h1>All the restaurants</h1>
+  <div class="my-3 py-2">
+    <ul class="list-group">
+    <% @restaurants.each do |restaurant| %>
+      <li class='list-group-item'><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    <% end %>
+    </ul>
+  </div>
+
+  <%= link_to "Add a new restaurant", new_restaurant_path %>
+</div>
